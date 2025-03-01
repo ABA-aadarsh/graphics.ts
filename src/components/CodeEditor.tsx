@@ -9,7 +9,6 @@ monaco.languages.typescript.javascriptDefaults.setDiagnosticsOptions({
     noSyntaxValidation: false,  
 });
 export const CodeEditor = ({setCode}:{setCode?: (code:string)=>void}) => {
-    console.log("editor rendered")
     const editorRef = useRef<monaco.editor.IStandaloneCodeEditor | null>(null);
 
     const handleEditorDidMount = (editor: monaco.editor.IStandaloneCodeEditor, monacoInstance: Monaco) => {
@@ -82,6 +81,22 @@ export const CodeEditor = ({setCode}:{setCode?: (code:string)=>void}) => {
                         kind: monaco.languages.CompletionItemKind.Keyword,
                         insertText: "putPixel($1, $2)",
                         detail: "Draw Pixel at (x,y)",
+                        insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+                        range,
+                    },
+                    {
+                        label: "delay",
+                        kind: monaco.languages.CompletionItemKind.Keyword,
+                        insertText: "delay($1)",
+                        detail: "Pause for given time",
+                        insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
+                        range,
+                    },
+                    {
+                        label: "setcolor",
+                        kind: monaco.languages.CompletionItemKind.Keyword,
+                        insertText: "setcolor($1)",
+                        detail: `Example: setcolor("red")`,
                         insertTextRules: monaco.languages.CompletionItemInsertTextRule.InsertAsSnippet,
                         range,
                     }
