@@ -6,7 +6,6 @@ type CanvasDimesion =  {
     height: number;
 }
 interface PropI {
-    n: number
 }
 const drawGrid = (ctx: CanvasRenderingContext2D | null, canvasWidth:number, canvasHeight:number)=>{
     if(!ctx || pixelSize<=5) return;

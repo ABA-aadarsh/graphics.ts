@@ -2,7 +2,7 @@ let ctx : CanvasRenderingContext2D | undefined;
 export const setCanvasContext = (context: CanvasRenderingContext2D)=>{
     ctx = context
 }
-export let pixelSize = 3
+export let pixelSize = 6
 export const _returnToDefaultStates = ()=>{
     if(ctx){
         // TODO: rotation and tranformation reset
