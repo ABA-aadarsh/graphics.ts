@@ -11,7 +11,7 @@ const App = () => {
   }
   return (
     <div className="grid grid-cols-2 w-full h-dvh overflow-hidden bg-neutral-900">
-      <CanvasRenderer/>
+      <CanvasRenderer ref={canvasrender_ref}/>
       <div className="flex flex-col">
         <div className="flex justify-between items-center pl-2">
           <h3 className="text-sm text-slate-400">Your Graphics.ts</h3>
